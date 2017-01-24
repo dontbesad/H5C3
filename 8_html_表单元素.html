@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>表单元素</title>
+    </head>
+    <body>
+        <!-- 表单元素 -->
+        <!-- form标签:提交表单 ;action提交地址 method提交方式(默认get)
+        enctype提交内容(默认application/x-www-form-urlencoded,要是设置为multipart/form-data则为上传文件)
+         autocomplete下面的控件补全提示(默认开启on)
+         novalidate不需要表单的输入验证(pattern required等无效)  -->
+        <form id="myform" action="http://127.0.0.1/blog" method="get" target="_blank" autocomplete="off">
+            <!-- input标签: ;autofocus默认将光标悬停在此控件上
+                            disabled不可写
+                            autocomplete补全提示
+                            name用于对提交到服务器后的表单数据进行标识 -->
+            <!-- fieldset标签:表单区间; -->
+            <fieldset>
+                <!-- legend标签:说明标签; -->
+                <legend>USER</legend>
+                <label>
+                    User<input name="user" autofocus autocomplete="on">
+                </label>
+            </fieldset>
+            <input name="test" disabled value="不可写">
+            <!-- button标签:按钮 ;type有三种submit reset button(默认是submit)
+            其他一些属性比如formaction之类的是h5的新属性,跟form标签的一些属性挂钩,具体网上查一下 -->
+            <button>提交</button>
+        </form>
+
+        <!-- 下面的input不在表单提交范围之内的话,就用form设置指定要提交form的id,相当于绑定提交 -->
+        <label for="email">Email<label> <!-- label标签:;for属性对应相同的id绑定一个控件 -->
+        <input type="email" form="myform" name="email" id="email">
+
+    </body>
+</html>

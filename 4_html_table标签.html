@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>表格元素</title>
+    </head>
+    <body>
+        <!--table标签-->
+        <table border="1"> <!-- table标签:;建议用css -->
+            <caption>标题</caption> <!-- caption标签:;table标题 -->
+            <thead> <!-- thead标签:;显示在table的最上面 -->
+                <tr> <!-- tr标签(table row) -->
+                    <th>Id</th> <!-- th标签(table header cell):有加粗效果; -->
+                    <th>Name</th>
+                    <th rowspan="3">我要合并3行</th>
+                </tr>
+            </thead>
+            <tbody> <!-- tbody标签:;显示在中间 -->
+                <tr>
+                    <td>1</td> <!-- td标签(table data cell) -->
+                    <td>Recoder</td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- tfoot标签:;无论在写在什么位置,在浏览器上都显示在table的最后 -->
+                <tr>
+                    <td colspan="3">我要合并2列</td>
+                </tr>
+            </tfoot>
+        </table> <br>
+        <table border="1">
+            <!-- colgroup标签:;设置整个列元素 -->
+            <colgroup span="1" style="background-color:#ccc;"></colgroup>
+            <!-- 下面接着一列 -->
+            <colgroup span="1" style="background-color:#888;"></colgroup>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>a</td>
+                <td>b</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <colgroup>
+                <col> <!-- col标签:设置列,是colgroup的子标签 ;此处是占位 -->
+                <col span="1" style="background-color:#555">
+            </colgroup>
+        </table>
+    </body>
+</html>

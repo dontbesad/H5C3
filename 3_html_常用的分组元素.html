@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>分组元素</title>
+        <style media="screen">
+        </style>
+    </head>
+    <body>
+        <!-- 常用的分组元素 -->
+        <p>
+            p标签(Paragraph)
+        </p>
+        <p>
+            这是一个p标签
+        </p>
+
+        <div>
+            div标签(Division)
+        </div>
+        <div>
+            这是一个div标签
+        </div>
+        <blockquote cite="http://www.baidu.com">
+            blockquote标签(Block Quotation):有缩进 ;表示引用的内容
+        </blockquote>
+
+        <pre>
+pre-start
+            pre标签(Preformatted):预订义格式,文字格式基本不变,标签还是会被解析;
+pre-end
+        </pre>
+
+        <br> <!--br标签(Break):换行;-->
+        <hr> <!--hr标签(Horizontal Rule):加条横线;-->
+
+        <ul><!-- ol标签(Unordered List):无序列表,有缩进; -->
+            <li>li标签(List Item)</li>
+            <li>li</li>
+        </ul>
+
+        <ol start="5"><!-- ul标签(Ordered List):有序列表,有缩进; 比如有一个start属性,就是从哪个数字开始 -->
+            <li>li</li>
+            <li>li</li>
+        </ol>
+        <ol reversed><!-- reversed属性一般不用,很多浏览器不支持 -->
+            <li>倒序li 一般不用</li>
+            <li value="10">li 这里li的value属性可以设置li的序列号</li> <!-- 设置li的序列号 -->
+            <li>li</li>
+        </ol>
+        <ol type="A"><!-- type大写字母 -->
+            <li>li-type属性大写字母</li>
+            <li>li</li>
+            <li>li</li>
+        </ol>
+        <ol type="I"><!-- type罗马字母 -->
+            <li>li-type属性罗马字母</li>
+            <li>li</li>
+            <li>li</li>
+        </ol>
+
+        <hr>
+        <dl> <!-- dl标签(Definition List):;定义列表 -->
+            <dt>dt标签(Definition Term):;定义术语</dt>
+            <dd>dd标签(Definition Description):有缩进 ;定义描述</dd>
+            <dd>内容的描述</dd>
+
+            <dt>内容标题</dt>
+            <dd>内容的描述</dd>
+        </dl>
+
+        <figure> <!-- figure标签:有缩进效果 ;用于元素的组合 -->
+            <figcaption>figcaption标签:添加图片标题</figcaption>
+            <img src="http://bpic.588ku.com/element_origin_min_pic/17/01/01/8bfcf559ca7a98494fb28b920b1b2f3b.jpg" alt="">
+        </figure>
+    </body>
+</html>

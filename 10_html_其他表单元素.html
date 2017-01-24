@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="" method="get">
+            <!-- select标签:下拉列表; name属性表示提交名称 disabled表示不可下拉 form表示与某一个表单挂钩 size表示下拉列表高度 multiple表示可以多选 required必须选择-->
+            <select name="fruit" size="6">
+                <optgroup label="水果"> <!-- 分组 -->
+                    <option value="1">苹果</option>
+                    <option value="2" disabled>香蕉</option>
+                    <option value="3" selected>橘子</option> <!-- selected默认选定-->
+                </optgroup>
+                <optgroup label="蔬菜" disabled> <!-- disabled表示禁用该分组 -->
+                    <option value="4">小米</option>
+                    <option value="5">番茄</option>
+                </optgroup>
+            </select>
+            <br>
+            <textarea name="text" rows="5" cols="10" wrap="soft">你好</textarea>
+            <br>
+            <button>提交</button>
+        </form>
+        <form action="http://127.0.0.1/H5C3/10.html" oninput="res.value=num1.valueAsNumber * num2.valueAsNumber">
+            <input type="number" id="num1"> X <input type="number" id="num2"> =
+            <output for="num1 num2" name="res"></output>
+        </form>
+    </body>
+</html>

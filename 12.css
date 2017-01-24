@@ -1,0 +1,24 @@
+@charset "UTF-8"; /* css文件的编码为utf-8,一般指对其中的中文注释 */
+@import "13.css"; /* 导入css,不过还是在html里写link性能好 */
+
+p {
+    color: green !important; /* 在样式后面加上!important表示强制优先 */
+}
+/* 样式继承 */
+/*
+   一些css文字属性会被继承
+   比如常见: font-size, color, font-style, font, font-family, list-style,
+            text-indent, text-align, line-height, cursor...
+*/
+/* 另外p标签不能套h div之类的块级标签,只能含有内联标签
+常见的就是 h1, h2, h3, h4, h5, h6, p, dt 这几个块元素不能在嵌套块级元素 */
+p {
+    color: red;
+    font-size: 36px;
+    border: 1px solid red; /* 比如边框属性就不能继承 */
+}
+
+/* b标签在p标签内部, 所以一些文字样式就被继承了 */
+b {
+    border: inherit; /* 不过只要写上inherit 原本不能继承的也可以继承了 */
+}

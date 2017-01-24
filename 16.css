@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+div {
+    /* 以下四个属性可以対宽高进行限制设置 */
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* margin和padding就不讲了 */
+
+#box {
+    background-color: #ccc;
+    /* 这里的width和height就被上面所限制了,最大200px,最小100px */
+    width: 50%; /* 百分比只能対width设置 height没有用 */
+    height: 150px;
+}
+
+#box2 {
+    background-color: #ddd;
+    width: 1%;
+    height: 0px;
+    /* 溢出属性:visible(溢出,默认),scroll(滚动条),auto(由浏览器操作),hidden(溢出隐藏)*/
+    overflow: hidden; /* 还有overflow-x水平溢出和overflow-y垂直溢出 */
+}
+
+#box3 {
+    background-color: #ccc;
+    /* 是否可见(可不可见都会占据空间,要是不可见不占据空间的话就用display属性):
+    visible(可见,默认),hidden(不可见),还有collapse属性用在表格上 */
+    visibility: hidden;
+}
+
+/*
+块级元素:div,p,h之类的,单独一行,宽度默认宽度100%,可以设置宽高
+行级元素:span,a之类的,不可以设置宽高
+行-块元素:img之类的,可以设置宽高
+但是通过display属性可以转化
+*/
+
+#left {
+    background: #999;
+    float: left;
+    width: 200px;
+    height: 100px;
+}
+#left2 {
+    background-color: #f9e;
+    width: 200px;
+    height: 100px;
+    float: right;
+    clear: left; /* 清除左侧元素浮动造成的影响 */
+}

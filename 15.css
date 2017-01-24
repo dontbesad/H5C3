@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body {
+    font-size: 120%; /* 将字体设置为默认字体1.2倍大小 */
+}
+
+p {
+    color: red; /* color属性対字体和边界有效 */
+    border: 1px solid;
+
+    /* font-size设置字体大小:em px %等 */
+    /*font-size: 200%; 同下 */
+    font-size: 2em; /* 将字体设置为上级(此处的上级为body)设置字体大小的2倍 */
+    /* px就不讲了 还有small large等不常用的字体大小设置 */
+
+    /* font-variant设置字体是否变成小型的大写字母 */
+    font-variant: small-caps; /* 将字体设置为小型的大写字母:小写变大写且字体变小,大写不变 */
+    /*font-variant: normal;  将上面的small-caps冲突掉 */
+
+    /* font-style设置字体的样式:倾斜等 */
+    font-style: italic; /* 倾斜 */
+
+    /* font-weight设置字体的粗细:bold bolder lighter 还可以是100~900的数字(600以后加粗) 等 */
+    font-weight: bold; /* 加粗 */
+
+    /* font-family设置字体系列 */
+    font-family: 宋体,楷体; /* 设置几个备用字体 逗号隔开 */
+}
+#div {
+    /* font一次设置多个字体的样式:
+    [font-style字体是否倾斜][font-variant字体是否小型大写字母][font-weight字体粗细] font-size字体大小 font-family字体系列
+    font-size和font-family是必须的, 所以至少需要两个属性值*/
+    font: italic normal bold 30px 宋体;
+}
+
+/* 服务器端引入一个字体,这样客户端也可以显示了 */
+/*
+@font-face {
+    font-family: 字体指定名;
+    src: url('字体链接');
+}
+div {
+    font-family: 字体指定名;
+}
+*/
+
+#text {
+    /* 文本装饰:下划线(underline),中划线(line-through)上划线(overline),什么都不加(none) */
+    text-decoration: none;
+    /* 文本大小写:小写(lowercase),大写(uppercase),单词首字母大写(capitalize),什么都不做(none) */
+    text-transform: lowercase;
+    /* 文本阴影(css3): 横 纵 [模糊距离] [颜色] */
+    text-shadow: 5px 5px 5px #666;
+}
+#text2 {
+    /* 文本排列方式：center right left justify */
+    text-align: justify; /* 文本两端对齐,使其饱满 */
+    /* 空白排版: normal(空白符被压缩,自动换行,默认),nowrap(空白符被压缩不换行)
+         pre(跟<pre>类似功能) 等
+    */
+    white-space: normal;
+    /* 文本间距设置 */
+    letter-spacing: 5px;
+    /* 行高 */
+    line-height: 114%;
+}
+#text3 {
+    width: 50%;
+    text-align: justify;
+
+    word-wrap: break-word; /* 设置长单词自动断开(css3) */
+
+    text-indent: 1em; /* 设置文本缩进 */
+}

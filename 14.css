@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*
+***伪类选择器
+*/
+/* ------1.结构性伪类选择器------ */
+/* 根元素选择器, 匹配文档中的根元素(<html>元素),不常用 */
+:root {
+    border: 1px solid;
+}
+
+#box {
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+}
+
+/* 下面4个选择器是常见子元素选择器 */
+/* first-child选择器 */
+ul > li:first-child {
+    font-size: 20px;
+    color: blue;
+}
+/* last-child选择器 */
+ul li:last-child {
+    color: red;
+    font-size: 24px;
+}
+/* only-child选择器:只有一个子元素时生效 */
+li:only-child {
+    background-color: #ccc;
+}
+/* only-of-type选择器:选择指定类型只有一个的子元素 */
+#box > span:only-of-type {
+    color: red;
+}
+/* 选择第几个元素(css3) */
+li:nth-child(2) {
+    color: #888;
+}
+/*
+子元素选择器还有nth-of-type nth-last-of-type
+很少用到
+*/
+
+/* ------2.UI伪类选择器(表单型的)------- */
+/* 指定属性值的enabled选择器:选择启用的input(css3) */
+input[type="text"]:enabled {
+    border: 1px solid red;
+}
+/* disabled选择器:选择禁用的input(css3) */
+input:disabled {
+    border: 1px solid blue;
+}
+/* checked选择器:选择被选择的复选框(css3) */
+input:checked {
+    height: 20px;
+}
+
+/* default选择器:选择默认选择的复选框,用的很少(css3)
+input:default {
+    width: 100px;
+}
+*/
+/* 合法选择器 */
+input:valid {
+    border: 5px solid green;
+}
+/* 非法选择器 */
+input:invalid {
+    border: 5px solid red;
+}
+/* 有required这个属性 */
+input:required {
+
+}
+/* 要是没有required这个属性 */
+input:optional {
+    color:brown;
+}
+
+/* ------3.动态伪类选择器(鼠标的一些操作)------*/
+/* link选择器:设置未被访问过的链接 */
+a:link {
+    border: 1px solid red;
+    color: #pink;
+}
+/* visited选择器:设置已经被访问过的链接 */
+a:visited {
+    border:1px solid yellow;
+}
+/* hover选择器:设置鼠标移动的标签 */
+a:hover {
+    border:3px solid #888;
+}
+/* active选择器:设置激活时的链接(点击时) */
+a:active {
+    color: black;
+}
+/* focus选择器:针对文本框,获取光标 */
+input:focus {
+    background-color: #339d93;
+}
+
+/* ------4.其他选择器------ */
+/* 否定选择器:设置不符合条件的元素,下面表示链接中不包含google的a标签设置成字体大小25px */
+a:not([href*="google"]) {
+    font-size: 25px;
+}
+/* 空选择器:设置内容为空的标签 */
+u:empty {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background: red;
+}
+/* 还有target选择器 lang选择器不常用, 可以了解一下 */

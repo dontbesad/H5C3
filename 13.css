@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* 选择器 */
+
+
+
+/* 通用选择器:将所有的标签都设置同一个样式 */
+/*
+* {
+    border: 1px solid #000;
+}
+*/
+
+/* ID选择器 */
+#xxx { }
+
+/* 类选择器 */
+.xxx {}
+
+/* 属性选择器 */
+[href] {
+    color: red;
+}
+/* --指定属性值的属性选择器 */
+[type="password"] {
+    border: 3px solid blue;
+}
+/* --指定以http的属性选择器 */
+[href^="http"] {
+    border: 1px solid;
+}
+/* --指定以cn结尾的属性选择器 */
+[href$="cn"] {
+    color: yellow;
+}
+/* --指定含有baidu字段的属性选择器 */
+[href*="baidu"] {
+    font-size: 20px;
+}
+
+/* 混合选择器 */
+h1,h2 {
+    color: red;
+}
+
+/* 后代选择器:不用严格层级,只要div后面有span就行 */
+div span {
+    color: green;
+}
+
+/* 子选择器:严格要求下一层 */
+div>p>span {
+    border: 5px solid;
+}
+
+/* 相邻兄弟选择器:下面第一个兄弟才会生效 */
+em + u {
+    color: #888    ;
+}
+/* 普通兄弟选择器:接下来所有的兄弟都生效 */
+em ~ u {
+    border: 2px solid;
+}
+
+/* -------------------------------------*/
+/* 伪选择器分两种:一种是伪元素选择器,另一种是伪类选择器 */
+/* 伪元素选择器的话是(::),伪类选择器的话是(:) */
+
+/* 伪元素选择器 */
+
+/* 块级首行 ::first-line */
+.content::first-line {
+    color:red;
+}
+/* 块级首字母 ::first-letter */
+.content::first-letter {
+    border: 1px solid;
+}
+/* before选择器 ::before   文本前插入 */
+.content::before {
+    content: '文本前插入';
+}
+/* after选择器 ::before    文本后插入 */
+.content::after {
+    content: '文本后插入';
+}
+
+/*  */

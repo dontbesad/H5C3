@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>嵌入元素</title>
+    </head>
+    <body>
+        <!-- 嵌入标签 -->
+        <a href="http://127.0.0.1/H5C3/6_html_嵌入标签.html">
+            <img src="http://preview.quanjing.com/agestock019/zl4-2205350.jpg" alt="这是图片" width="200" height="200" ismap>
+            <!-- img标签有map属性可以网上查一下(设置点击一些区块链接到不同的网址) -->
+        </a>
+        <br>
+        <progress value="10" max="100">
+            progress标签:进度条 ;一般用js控制 (IE9及以下不支持此标签)
+        </progress>
+
+        <!-- meter标签:;范围提醒标签 -->
+        <meter value="51" min="20" max="100" low="60" high="80">小于low值</meter>
+        <meter value="61" min="20" max="100" low="60" high="80">在low和high之间</meter>
+        <meter value="81" min="20" max="100" low="60" high="80">大于high值</meter>
+        <hr>
+
+        <a href="http://www.baidu.com" target="in">baidu</a> | <a href="http://www.u17.com" target="in">u17</a>
+        <br>
+        <iframe src="http://127.0.0.1/blog" width="500px" height="600" name="in">
+            iframe标签:内联框架,一般嵌入网页; a中的targin和iframe中的name名字应该一致
+        </iframe>
+
+        <!-- embed标签:嵌入内容 ;一般嵌入插件,比如flash 视频之类的 -->
+        <embed src="http://www.tudou.com/l/an0RIhx3ocM/&iid=252438451&resourceId=0_05_02_99/v.swf" width="480" height="400"></embed>
+    </body>
+</html>

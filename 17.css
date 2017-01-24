@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+#box {
+    /* 边框设置: [(border-width)边框宽度],(border-style)边框样式(实线虚线等,必须),[(border-color)边框颜色] */
+    border: solid;
+    /* border-style 边框样式可以网上搜索 */
+
+    /* 设置圆角边框 */
+    border-radius: 5px;
+}

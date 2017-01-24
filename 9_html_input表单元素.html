@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>input表单元素</title>
+    </head>
+    <body>
+        <!-- input表单元素 -->
+        <form action="" method="get">
+            <!-- type默认是text
+                 maxlength表示输入文本的最大长度
+                 size表示文本框的长度(推荐用css width代替)
+                 value表示默认内容
+                 readonly表示只读,可以提交value内容
+                 disabled表示不可用,不能提交value内容
+                 list表示引用数据列表,绑定datalist标签中的id,其中包含输入字段的预定义选项
+                 required表示此选项必填
+                 placeholder表示提示字
+                 tabindex表示按下tab的时候获取的焦点顺序(默认是从上往下) -->
+            <input type="text" maxlength="6" size="6" readonly value="hello" required>
+            <input type="text" list="mylist">
+            <!-- datalist标签:数据列表用于配合input使用,被input中的list属性绑定 -->
+            <datalist id="mylist">
+                <!--option双标签-->
+                <option>apple</option>
+                <option>pen</option>
+                <!-- 单标签写法 实际填入input的value值 -->
+                <option value="hello" label="你好"></option>
+            </datalist>
+
+            <input type="password" placeholder="请输入密码"> <!-- 其属性跟text一样 -->
+
+            <input type="search"> <!-- 写入文本后,右边会有一个X. firefox好像不支持 -->
+            <br>
+            <!-- type为number时 min最小值 max最大值 step步长(默认1) -->
+            <input type="number" min="2" max="10" step="2">
+            <input type="range" min="5" max="10">
+            <br>
+            <!-- type为date,time之类的,日期控件 (IE,firefox不支持), 推荐用jQ代替 -->
+            <input type="date">
+            <input type="month">
+            <input type="time">
+            <input type="week">
+            <input type="datetime">
+            <br>
+
+            <input type="color" name="color"> <!-- type为color,IE不支持 -->
+            <br>
+            <!-- type为checkbox,复选框 -->
+            music<input type="checkbox" name="music" value="1">
+            sport<input type="checkbox" name="sport" value="2">
+            <br>
+            <!-- type为radio,name相同单选框,checked表示默认选择 下面的value值是要提交的值(默认是on) -->
+            man<input type="radio" name="sex" value="1" checked>
+            women<input type="radio" name="sex" value="2">
+            <br>
+            <!-- type为image 定义图像作为提交按钮submit,并且可以获取点在图像的坐标 -->
+            <input type="image" width="100" height="100" src="http://img17.3lian.com/d/file/201701/16/1bcb0dc0d94e711c74c2a2863ace3b2f.jpg">
+            <br>
+            <!-- 以下三个一般用正则表达式来检测 -->
+            <input type="email"> <!---->
+            <input type="tel"> <!-- 基本不用 -->
+            <input type="url"> <!-- 支持也不是很好 -->
+            <br>
+            <!-- type等于hidden:隐藏控件 一般用于关联数据 -->
+            <input type="hidden" name="hidden" value="xxx">
+
+            <!--type可以等于submit reset button这里跟button一样-->
+            <input type="submit">
+
+            <!-- type等于file表示上传文件,前提form的enctype等于multipart/form-data
+                 accept限制文件上传的MIME类型
+             -->
+            <input type="file" accept="image/jpeg,image/gif">
+        </form>
+    </body>
+</html>

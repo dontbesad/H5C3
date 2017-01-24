@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>视频和音频</title>
+    </head>
+    <body>
+        <!-- 音视频标签 -->
+        <video src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4" width="300" height="200"
+        controls autoplay loop muted poster="http://img17.3lian.com/d/file/201701/16/1bcb0dc0d94e711c74c2a2863ace3b2f.jpg">
+            video标签:视频播放 ;controls属性显示播放控件 autoplay载入时自动播放 loop循环播放 muted静音 poster没有播放时的海报
+        </video>
+        <video controls autoplay loop width="300" height="200">
+            <source src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4">
+            您的浏览器不支持mp4
+        </video>
+        <br>
+        <audio src="http://sc1.111ttt.com/2015/1/05/20/98201126418.mp3" autoplay controls loop muted>
+            audio标签:音频播放 ;跟video标签属性差不多
+        </audio>
+        <audio autoplay controls loop muted>
+            <source src="http://sc1.111ttt.com/2015/1/05/20/98201126418.mp3">
+            您的浏览器不支持mp3
+        </audio>
+    </body>
+</html>
