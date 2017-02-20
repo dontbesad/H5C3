@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css过渡效果</title>
+        <style>
+        #box {
+            width: 200px;
+            height: 120px;
+            border: 1px solid blue;
+            /* 设置过渡的指定样式, 默认是all */
+            transition-property: background-color, color, margin-left; /* 指定这几个样式 */
+            /* 设置过渡时间 */
+            transition-duration: 1s;
+            /* 设置过渡的方式(函数) */
+            /* 默认是ease(减速), linear(匀速), ease-in(加速), ease-in-out(慢->块->慢)... 还可以自己设置 */
+            /*transition-timing-function: ease-in-out;*/
+            /*transition-timing-function: cubic-bezier(0.1, 0.1, 0.1, 0.1);*/ /* 自己可以设置bezier曲线 */
+            transition-timing-function: steps(20, start); /* 跳跃式, 这里是一开始跳跃且跳跃20次 */
+
+            transition-delay: 0.5s; /* 延迟过渡效果, 这里是全部延迟0.5s */
+            transition-delay: 0.1s, 0.7s, 1s; /* 这里是transition-property指定样式分别延迟 */
+
+            /* 以上不常用,一般要用简写版本 */
+        }
+        #box:hover {
+            background-color: #99d;
+            color: white;
+            margin-left: 100px;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 130px;
+            margin-top: 50px;
+            background-color: #669;
+            /* 简写版本是常用的 */
+            /* property duration timing-function delay */
+            transition: all 1s ease 0.2s;
+        }
+        #box2:hover {
+            margin-left: 100px;
+            width: 300px;
+            height: 200px;
+            background-color: #99e;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            Hello World
+        </div>
+        <div id="box2">
+            ok
+        </div>
+    </body>
+</html>

@@ -8,3 +8,42 @@
     /* 设置圆角边框 */
     border-radius: 5px;
 }
+
+#bg {
+    width: 60%;
+    height: 800px;
+    border: 10px dashed #888;
+
+    background-image: url('http://www.fzlu.com/uploads/allimg/121105/1-121105091I1a0.jpg');
+    /* 背景图片平铺方式: 默认水平垂直都平铺(repeat),水平平铺(repeat-x),垂直平铺(repeat-y),不平铺(no-repeat) */
+    background-repeat: repeat;
+    /* 背景图片的位置:left right top bottom center */
+    background-position: center;
+    /* 背景图片尺寸(css3):auto(默认值,以图像原本尺寸显示),
+    cover(图片等比例缩放,刚好覆盖容器,有可能部分超过容器不显示),
+    contain(图片扩大尺寸使其宽度或高度适合容器,所以图片可能会横向或者纵向重复,可以看到一副完整的图片)
+    百分比或px(第一个设置宽度,第二个设置高度,要是只设置了一个的话 宽度固定 高度auto)
+    */
+    background-size: 100%; /* 宽度100%,高度auto */
+    /* 背景是否随着滚动条滚动:默认滚动(scroll),固定(fixed) */
+    background-attachment: fixed;
+    /*
+    (css3)
+    background-origin 背景图片覆盖边界?padding?还是content?
+    background-clip 背景图片裁剪边界之外?padding?还是content?
+    */
+}
+
+#bg2 {
+    width: 200px;
+    height: 200px;
+    /* background顺序写法:
+    5个属性值可选,可以不按顺序来
+       [background-color]
+       [background-image]
+       [background-repeat]
+       [background-attachment]
+       [background-position]
+     */
+    background: url(http://www.fzlu.com/uploads/allimg/121105/1-121105091I1a0.jpg);
+}

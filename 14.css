@@ -99,6 +99,7 @@ a:active {
 /* focus选择器:针对文本框,获取光标 */
 input:focus {
     background-color: #339d93;
+    color: #fff;
 }
 
 /* ------4.其他选择器------ */

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>3D</title>
+    </head>
+    <style media="screen">
+    #out {
+        width: 200px;
+        border: 2px solid blue;
+        margin: 100px;
+        /* 向设置3d 下面两个属性必不可少 */
+        perspective: 50px; /* 相当于人与物体的距离 */
+        transform-style: preserve-3d;
+    }
+    #box {
+        width: 200px;
+        height: 120px;
+        background-color: #888;
+
+        /* Z轴设置远近 */
+        /*transform: translate3d(0px, 0px, -999px);*/
+        transform: translateZ(-50px);
+        /* 要想3d缩放和3d翻转都生效 只能两个一起设置,如下 */
+        transform: scale3d(1, .8, 0.5) rotateY(10deg);
+
+        transition: 1s;
+    }
+    #box:hover {
+        transform: rotateY(180deg);
+    }
+
+    #out2 {
+        width: 200px;
+        height: 120px;
+        border: 2px solid blue;
+        perspective: 100px;
+        perspective-origin: right top; /* 按右上角作为翻转的起点 */
+    }
+
+    #box2 {
+        width: 200px;
+        height: 120px;
+        background-color: #99c;
+        transform: rotate3d(0,0,1,90deg); /* 1表示旋转,0表示不旋转 */
+        transform: rotateX(40deg); /*  */
+    }
+    </style>
+    <body>
+        <div id="out">
+            <div id="box">
+                7
+            </div>
+        </div>
+        <div id="out2">
+            <div id="box2">
+
+            </div>
+        </div>
+    </body>
+</html>

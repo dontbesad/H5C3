@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>h5c3回顾</title>
+        <style media="screen">
+        #box {
+            width: 200px;
+            height: 50px;
+            background: #ccc;
+            transition: all 1s ease-in-out 0.5s;
+            word-spacing: 2em;
+            white-space: nowrap;
+
+            overflow: hidden;
+            text-overflow: ellipsis; /* 这个属性要设置为省略号的话 那么上面的属性要设置为隐藏 */
+        }
+        #box:hover {
+            width: 250px;
+            height: 150px;
+            color: #fff;
+        }
+        #font {
+            width: 500px;
+            height: 300px;
+            background-color: #000;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            position: absolute;
+            top: 100px;
+            left: 500px;
+            animation: myanimation 4s ease-in-out;
+        }
+        @keyframes myanimation {
+            50% {
+                color: #fff;
+            }
+
+        }
+        #boxsize {
+            width:150px; height:150px; background-color:#8cd;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+        </style>
+
+    </head>
+    <body>
+        <mark>锚点是a标签中的href链接(比如href=#1)和a标签中的name(比如name=1)之间的联系</mark>
+        <dl>
+            <dt>这是标题</dt>
+            <dd>这是介绍</dd>
+            <dd>这是介绍2</dd>
+        </dl>
+        <progress value="80" max="100">80%</progress>
+        <meter value="70" min="0" max="100" high="60" low="20">low和high之间才是绿色</meter>
+        <br>
+        <a href="http://www.baidu.com" target="ok">baidu</a> | <a href="http://www.soso.com" target="ok">soso</a> <br>
+        <iframe src="http://127.0.0.1/blog" frameborder="0" width="300px" height="200px" name="ok" scrolling="no">
+            a标签target属性和iframe标签的name属性一致
+        </iframe>
+
+        <div id="box">
+            Hello world 你好 asdhkjashdkjhaskjdhkashdkjasjdklasjdljlk
+        </div>
+        <div id="font">
+            这是一首简单的歌...
+        </div>
+
+        <div id="boxsize">
+            Hello
+        </div>
+    </body>
+</html>

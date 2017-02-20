@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+table {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid;
+    /* 下面的属性是表格独有的 */
+    /* 表格单元格合并边框:默认分离(separate), 合并表格边框(collapse) */
+    border-collapse: separate;
+    /* 单元格间距(在以上单元格没有合并的情况下) */
+    border-spacing: 1px;
+    /* 表格标题:默认上面(top),下面(bottom) */
+    caption-side: bottom;
+    /* 表格单元格内容为空:默认显示单元格(show),不显示(hide) */
+    empty-cells: hide;
+    /* 单元格内容过长拉伸:默认自动拉伸宽高(auto),固定宽(fixed) */
+    table-layout: fixed;
+
+}
+td {
+    border: 1px solid;
+    /* 表格单元格中内容的垂直位置: middle(默认居中),baseline(基线),bottom(底部),top(顶部) */
+    /* 也可以用在文本中,一般用在内联元素 */
+    vertical-align: middle;
+}
+
+ul {
+    width: 100px;
+    /* 下面属性是列表专有 */
+    /* ul中li前面的标记: disc(默认实心圆),none(什么也没有),circle(空心圆)...等(具体参看手册) */
+    list-style-type: lower-roman;
+    /* 标记是否算在ul中:默认不算(outside),在里面 算(inside) */
+    list-style-position: inside;
+    /* 图片代替标记 */
+    list-style-image: url(http://pic55.nipic.com/file/20141208/19462408_171130083000_2.jpg);
+    /* 简写形式:[-type][-position][-image] */
+    list-style: square inside url(http://pic55.nipic.com/file/20141208/19462408_171130083000_2.jpg);
+}
+
+u {
+    vertical-align: top; /* 顶部 */
+    vertical-align: 100%; /* 向上100%字体的高度 */
+}
